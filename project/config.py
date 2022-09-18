@@ -39,7 +39,7 @@ class DevelopmentConfig(BaseConfig):
 
 class ProductionConfig(BaseConfig):
     DEBUG = False
-    # TODO: дополнить конфиг
+
 
 
 class ConfigFactory:
