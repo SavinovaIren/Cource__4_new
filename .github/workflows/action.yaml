@@ -10,9 +10,9 @@ jobs:
       # Собираем
       - name: docker build
         run: docker build -t irka887/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
-      #
+      # Логинимся
       - name: docker login
         run: echo ${{ secrets.DOCKER_TOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-      #
+      # Отправляем
       - name: docker push
-          run: docker push  irka887/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+        run: docker push  irka887/flask-app:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
