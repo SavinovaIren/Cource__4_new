@@ -24,7 +24,7 @@ jobs:
       - name: render configs
         run: |
           mkdir Cource__4_new
-          cat docker-compose-ci.yaml | envsubst > Cource__4_new/docker-compose.yaml
+          cat docker-compose-server.yaml | envsubst > Cource__4_new/docker-compose.yaml
           cat docker_ci_config.py | envsubst > Cource__4_new/docker_config.py
       - name: copy files to server
         uses: appleboy/scp-action@master
