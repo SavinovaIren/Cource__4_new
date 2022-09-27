@@ -24,15 +24,15 @@ jobs:
       - name: render configs
         run: |
           mkdir deploy
-          cat docker-compose-ci.yaml | envsubst > deploy/docker-compose.yaml
-          cat docker_ci_config.py | envsubst > deploy/docker_config.py
+          cat docker-compose-ci.yaml | envsubst > Cource__4_new/docker-compose.yaml
+          cat docker_ci_config.py | envsubst > Cource__4_new/docker_config.py
       - name: copy files to server
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "deploy/docker-compose.yaml,deploy/docker_config.py"
+          source: "Cource__4_new/docker-compose.yaml,Cource__4_new/docker_config.py"
           target: "flask-app"
           strip_components: 1
       - name: run docker-compose
