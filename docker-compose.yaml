@@ -3,6 +3,6 @@ version: "3.9"
 services:
   app:
     build:
-      context: ..
+      context: .
     ports:
       - 80:80
