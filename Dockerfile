@@ -8,4 +8,4 @@ COPY run.py .
 COPY project project
 ENV FLASK_APP=run.py
 
-CMD gunicorn run -h 0.0.0.0 -p 8000
+CMD gunicorn run -h 0.0.0.0 -p 5000

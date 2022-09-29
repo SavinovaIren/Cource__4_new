@@ -4,4 +4,4 @@ services:
   app:
     image: irka887/flask-app:latest
     ports:
-      - 80:80
+      - 5432:5432
